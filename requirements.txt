@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+openai
+pandas
+python-dotenv
+pydantic
+requests
+openpyxl
+python-multipart
+jinja2
+nest-asyncio
