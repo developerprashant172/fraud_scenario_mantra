@@ -29,4 +29,7 @@ class CompensationResponse(BaseModel):
     compensation_eligible: bool
     compensation_amount: str
     other_info: str
+    bank_name: Optional[str] = None
+    links: Optional[dict] = None
+
 

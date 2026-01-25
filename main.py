@@ -5,9 +5,10 @@ from openai import OpenAI
 from app.models import FraudQuery, FraudResponse, CompensationQuery, CompensationResponse
 
 
+
 import json
 
-from app.utils import get_embedding, zilliz_search, format_top_matches_for_prompt
+from app.utils import get_embedding, zilliz_search, format_top_matches_for_prompt, lookup_bank_links
 ##uvicorn main:app --reload
 ##pip install -r requirements.txt
 load_dotenv()
@@ -206,14 +207,34 @@ Matched Compensation Rule:
 
 COMP_COLLECTION = os.getenv("COMP_COLLECTION", "bank_compensation_rules")
 
+def extract_bank_name(user_message):
+    prompt = f"""
+Extract bank name from this message.
+If no bank mentioned return "None".
+Return only bank name text, nothing else.
+
+Message:
+{user_message}
+"""
+    res = client.chat.completions.create(
+        model="gpt-4.1-mini",
+        messages=[{"role":"user","content":prompt}],
+        temperature=0
+    )
+    name = res.choices[0].message.content.strip()
+    if name.lower() == "none":
+        return None
+    return name
+
+
 
 @app.post("/mantra_compensation", response_model=CompensationResponse)
 async def mantra_compensation(request: CompensationQuery):
 
-    # Step 1 — Embed user message
+    # ---- Step 1 Embed ----
     emb = get_embedding(request.user_message)
 
-    # Step 2 — Search compensation collection
+    # ---- Step 2 Vector search ----
     results = zilliz_search("bank_compensation_rules", emb, top_k=5)
 
     if not results:
@@ -222,15 +243,30 @@ async def mantra_compensation(request: CompensationQuery):
           "transaction_date":"none",
           "compensation_eligible": False,
           "compensation_amount":"none",
-          "other_info":"No matching compensation policy found"
+          "other_info":"No matching compensation policy found",
+          "bank_name": None,
+          "links": None
         }
 
-    # Step 3 — Take top match only
+    # ---- Step 3 Top rule ----
     top_rule = results[0]
     rule_block = format_comp_rule_for_prompt(top_rule)
 
-    # Step 4 — Ask OpenAI
+    # ---- Step 4 LLM compensation evaluation ----
     llm_json = run_compensation_llm(request.user_message, rule_block)
+    response_data = json.loads(llm_json)
 
-    # Step 5 — Return directly
-    return json.loads(llm_json)
+    # ---- Step 5 Extract bank name ----
+    bank_name = extract_bank_name(request.user_message)
+
+    # ---- Step 6 Lookup policy links if bank found ----
+    links = None
+    if bank_name:
+        links = lookup_bank_links(bank_name)
+
+    # ---- Step 7 Final merge ----
+    response_data["bank_name"] = bank_name
+    response_data["links"] = links
+
+    return response_data
+

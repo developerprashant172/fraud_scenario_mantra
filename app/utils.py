@@ -5,6 +5,7 @@ import math
 import requests
 from dotenv import load_dotenv
 from openai import OpenAI
+import pandas as pd
 
 load_dotenv()
 
@@ -233,5 +234,47 @@ def calculate_compensation(calc_text: str, user_text: str):
 
     # fallback
     return None, "Refer to bank for exact calculation"
+
+
+
+BANK_POLICY_PATH = "bank_policy.csv"
+
+# Load once
+if os.path.exists(BANK_POLICY_PATH):
+    BANK_POLICY_DF = pd.read_csv(BANK_POLICY_PATH)
+    BANK_POLICY_DF["Bank Name"] = BANK_POLICY_DF["Bank Name"].str.lower().str.strip()
+else:
+    BANK_POLICY_DF = None
+
+
+def lookup_bank_links(bank_name: str):
+    if BANK_POLICY_DF is None:
+        print("Bank policy CSV not loaded")
+        return None
+    
+    BANK_POLICY_DF["Bank Name Clean"] = (
+        BANK_POLICY_DF["Bank Name"]
+        .astype(str)
+        .str.lower()
+        .str.strip()
+    )
+
+    name_clean = bank_name.lower().strip()
+
+    row = BANK_POLICY_DF[
+        BANK_POLICY_DF["Bank Name Clean"].str.contains(name_clean)
+    ]
+
+    if row.empty:
+        return None
+
+    r = row.iloc[0]
+
+    return {
+        "compensation_policy": r.get("Compensataion Policy Link", None),
+        "grievance_policy": r.get("Grievance redressal policy", None)
+    }
+
+
 
 
