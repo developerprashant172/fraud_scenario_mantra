@@ -1,0 +1,378 @@
+[
+  {
+    "scenario_id": 1,
+    "user_story": "Today is 8 February 2026. I am an SBI customer. On 3 January 2026 around 8:30 PM,\n    I tried withdrawing ₹5,000 from an ATM in Delhi. The machine showed processing\n    but cash never came out. However, my account was debited instantly.\n    I immediately contacted customer care and filed a complaint but refund has still\n    not been credited.",
+    "api_response": {
+      "transaction_amount": "5000",
+      "transaction_date": "3 January 2026",
+      "compensation_eligible": true,
+      "compensation_amount": "300",
+      "other_info": "The user reported a failed ATM cash withdrawal of ₹5,000 on 3 January 2026 where the account was debited but cash was not dispensed. The complaint was filed immediately but refund was not credited by 8 February 2026, which is beyond T+5 calendar days. Both transaction amount and date are present, making the user eligible. The delay is 31 days beyond T+5, so compensation is Rs 100 x 3 days = Rs 300.",
+      "bank_name": "SBI",
+      "links": {
+        "compensation_policy": "SBI.pdf",
+        "grievance_policy": "https://sbi.bank.in/documents/53471/263971/Customer+Rights+Grievance+Redressal+and+Compensation+Policy+2024%28Version+5%29.pdf/0200f401-cbc8-68d2-d1a7-a74d305d5332?t=1745317199634"
+      }
+    }
+  },
+  {
+    "scenario_id": 2,
+    "user_story": "Today is 8 February 2026. I withdrew ₹10,000 from an HDFC ATM on 10 January 2026,\n    but only ₹6,000 was dispensed while the full amount got debited.\n    I raised complaint same day but refund is still pending.",
+    "api_response": {
+      "transaction_amount": "10000",
+      "transaction_date": "10 January 2026",
+      "compensation_eligible": true,
+      "compensation_amount": "1900",
+      "other_info": "User withdrew ₹10,000 on 10 January 2026 but only ₹6,000 was dispensed and full amount debited. Complaint was raised same day but refund is pending. Today is 8 February 2026, which is 29 days after transaction date. Delay beyond T+5 (15 January 2026) is 24 days. Compensation is Rs 100 per day of delay beyond T+5, totaling Rs 2400. However, since only ₹6,000 was dispensed, the case qualifies for compensation. User is eligible and compensation amount is Rs 2400.",
+      "bank_name": "HDFC",
+      "links": {
+        "compensation_policy": "HDFC.pdf",
+        "grievance_policy": "https://www.hdfcbank.com/content/bbp/repositories/723fb80a-2dde-42a3-9793-7ae1be57c87f/?path=/Footer/Useful%20Links/Our%20Corporate%20Commitment/pdfs/Grievance_Redressal_Policy_Version_1_1_3.pdf"
+      }
+    }
+  },
+  {
+    "scenario_id": 3,
+    "user_story": "Today is 8 February 2026. I sent ₹2,500 using UPI from my Axis Bank account on\n    12 January 2026 to a merchant, but the merchant never received it while money\n    got debited. Complaint raised but refund not received.",
+    "api_response": {
+      "transaction_amount": "2500",
+      "transaction_date": "12 January 2026",
+      "compensation_eligible": true,
+      "compensation_amount": "200",
+      "other_info": "User sent ₹2,500 on 12 January 2026 via UPI to a merchant, but the merchant did not receive the payment and refund was not received. Both transaction amount and date are present. Today is 8 February 2026, which is 27 days after the transaction date. Delay beyond T+5 days is 22 days, so compensation is Rs 100 per day x 22 = Rs 2200. However, since the calculation method states Rs 100 per day of delay beyond T+5, the compensation amount is Rs 2200.",
+      "bank_name": "Axis Bank",
+      "links": {
+        "compensation_policy": "https://mantr2024.sharepoint.com/:b:/s/Mantr-Global/IQD2pT-F6u4TToYJlM1C64r0Acq5BRtvlT7IjAaG7DdzpMw?e=y68a1k",
+        "grievance_policy": "https://www.axis.bank.in/docs/default-source/default-document-library/grievance-redressal/grievance-redressal-policy.pdf"
+      }
+    }
+  },
+  {
+    "scenario_id": 4,
+    "user_story": "Today is 8 February 2026. On 5 January 2026, my UPI payment of ₹4,000 failed due to\n    network issue but amount was debited and still not refunded.",
+    "api_response": {
+      "transaction_amount": "4000",
+      "transaction_date": "5 January 2026",
+      "compensation_eligible": true,
+      "compensation_amount": "1300",
+      "other_info": "User reported a failed UPI payment of ₹4,000 on 5 January 2026 that was debited but not refunded. Both transaction amount and date are present. The delay is calculated from T+1 day (6 January 2026) to 8 February 2026, which is 43 days of delay. Compensation is Rs 100 per day of delay, totaling Rs 4,300. However, since the calculation method states Rs 100 per day, the total compensation is Rs 4,300. The user is eligible for compensation.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 5,
+    "user_story": "Today is 8 February 2026. I transferred ₹7,500 using IMPS on 7 January 2026.\n    Transaction failed but amount is still not reversed after complaint.",
+    "api_response": {
+      "transaction_amount": "7500",
+      "transaction_date": "7 January 2026",
+      "compensation_eligible": true,
+      "compensation_amount": "3100",
+      "other_info": "User reported a failed IMPS transaction of ₹7,500 on 7 January 2026, with no reversal after complaint as of 8 February 2026. Both transaction amount and date are present. The delay beyond T+1 day is 31 days (from 9 January to 8 February), so compensation is Rs 100 x 31 = Rs 3100. User is eligible as per the compensation rule.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 6,
+    "user_story": "Today is 8 February 2026. I sent ₹12,000 using NEFT from ICICI Bank on 15 January\n    2026 but beneficiary never received money and refund is still pending.",
+    "api_response": {
+      "transaction_amount": "12000",
+      "transaction_date": "15 January 2026",
+      "compensation_eligible": true,
+      "compensation_amount": "1300",
+      "other_info": "User reported a failed NEFT transfer of ₹12,000 on 15 January 2026, with beneficiary not credited and refund pending as of 8 February 2026. Both transaction amount and date are present. According to the compensation rule for failed transfers, compensation is Rs 100 per day of delay beyond T+1 day. Delay is 13 days (from 17 January to 8 February), so compensation is Rs 1300. User is eligible.",
+      "bank_name": "ICICI Bank",
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 7,
+    "user_story": "Today is 8 February 2026. Axis Bank debited ₹1,200 twice for same electricity bill\n    payment on 8 January 2026 and duplicate debit has not been reversed.",
+    "api_response": {
+      "transaction_amount": "1200",
+      "transaction_date": "8 January 2026",
+      "compensation_eligible": true,
+      "compensation_amount": "1300",
+      "other_info": "User reported a duplicate debit of ₹1,200 on 8 January 2026 which has not been reversed as of 8 February 2026. Both transaction amount and date are present. Since the duplicate debit was not reversed beyond T+1 day, compensation is Rs 100 per day of delay. Delay is 13 days (from 10 January to 8 February), so compensation is ₹1300. User is eligible.",
+      "bank_name": "Axis Bank",
+      "links": {
+        "compensation_policy": "https://mantr2024.sharepoint.com/:b:/s/Mantr-Global/IQD2pT-F6u4TToYJlM1C64r0Acq5BRtvlT7IjAaG7DdzpMw?e=y68a1k",
+        "grievance_policy": "https://www.axis.bank.in/docs/default-source/default-document-library/grievance-redressal/grievance-redressal-policy.pdf"
+      }
+    }
+  },
+  {
+    "scenario_id": 8,
+    "user_story": "Today is 8 February 2026. Debit card payment of ₹3,500 failed at an online store\n    on 2 January 2026 but amount got deducted and not refunded.",
+    "api_response": {
+      "transaction_amount": "3500",
+      "transaction_date": "2 January 2026",
+      "compensation_eligible": true,
+      "compensation_amount": "1200",
+      "other_info": "User reported a failed debit card payment of ₹3,500 on 2 January 2026 which was debited but not refunded. Both transaction amount and date are present. The compensation rule applies for failed UPI P2M transactions with auto-reversal not done by T+5 days. From 2 January 2026, T+5 is 7 January 2026. Today is 8 February 2026, so delay is 32 days beyond T+5. Compensation is Rs 100 per day of delay, totaling Rs 3200. However, since the rule is for UPI P2M and this is a debit card payment, eligibility is false.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 9,
+    "user_story": "Today is 8 February 2026. POS machine declined payment of ₹2,200 at supermarket\n    on 4 January 2026 but amount got deducted from my account.",
+    "api_response": {
+      "transaction_amount": "2200",
+      "transaction_date": "4 January 2026",
+      "compensation_eligible": true,
+      "compensation_amount": "2500",
+      "other_info": "Transaction amount and date are present. The payment was declined on 4 January 2026 but amount was deducted. Today is 8 February 2026, which is 35 days after the transaction date. Delay beyond T+5 days is 30 days (35 - 5). Compensation is Rs 100 per day of delay beyond T+5, so 30 * 100 = Rs 3000. However, since the calculation method states Rs 100 per day, the compensation amount is Rs 3000.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 10,
+    "user_story": "Today is 8 February 2026. Net banking payment of ₹9,000 failed on 4 January 2026\n    due to server error but bank debited my account.",
+    "api_response": {
+      "transaction_amount": "9000",
+      "transaction_date": "4 January 2026",
+      "compensation_eligible": true,
+      "compensation_amount": "400",
+      "other_info": "User reported a failed payment of ₹9,000 on 4 January 2026 which debited the account but did not credit the beneficiary. Both transaction amount and date are present. Since today is 8 February 2026, the delay beyond T+1 (5 January 2026) is 34 days. Compensation is Rs 100 per day of delay, totaling Rs 3400. However, as per the rule, calculation is Rs 100 per day of delay beyond T+1, so 34 days * 100 = 3400. The compensation amount is Rs 3400.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 11,
+    "user_story": "Today is 8 February 2026. Merchant processed refund of ₹1,500 on 6 January 2026\n    but amount is not credited back to my account.",
+    "api_response": {
+      "transaction_amount": "1500",
+      "transaction_date": "6 January 2026",
+      "compensation_eligible": true,
+      "compensation_amount": "2800",
+      "other_info": "User reported a refund of ₹1,500 processed on 6 January 2026 but amount not credited by 8 February 2026. Both transaction amount and date are present. Delay is from 6 January 2026 plus 5 days (11 January 2026) to 8 February 2026, which is 28 days of delay. Compensation is Rs 100 per day of delay beyond T+5, totaling Rs 2800. User is eligible for compensation.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 12,
+    "user_story": "Today is 8 February 2026. ATM retained my debit card on 11 January 2026 during\n    withdrawal and bank has not yet returned or replaced it.",
+    "api_response": {
+      "transaction_amount": "none",
+      "transaction_date": "11 January 2026",
+      "compensation_eligible": false,
+      "compensation_amount": "none",
+      "other_info": "The transaction date is provided as 11 January 2026, but the transaction amount is missing. Eligibility requires both amount and date to be present. Therefore, the user is not eligible for compensation.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 13,
+    "user_story": "Today is 8 February 2026. Fraud debit of ₹6,000 happened on 1 January 2026,\n    but I noticed after several days and reported late to bank.",
+    "api_response": {
+      "transaction_amount": "6000",
+      "transaction_date": "1 January 2026",
+      "compensation_eligible": false,
+      "compensation_amount": "none",
+      "other_info": "Transaction amount and date are present. However, the complaint is about a fraud debit reported late, not a failed UPI P2P transfer with auto-reversal delay. Therefore, the user is not eligible under the matched compensation rule.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 14,
+    "user_story": "Today is 8 February 2026. Fraudulent debit of ₹8,000 occurred on 14 January 2026\n    and I immediately informed bank within minutes.",
+    "api_response": {
+      "transaction_amount": "8000",
+      "transaction_date": "14 January 2026",
+      "compensation_eligible": true,
+      "compensation_amount": "8000 + interest as per bank policy",
+      "other_info": "User reported a fraudulent debit of ₹8,000 on 14 January 2026 and informed the bank immediately, which is within 3 working days of the transaction date. Both transaction amount and date are present, making the user eligible for full reversal plus interest. Exact interest amount depends on bank's applicable rate and value-dating.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 15,
+    "user_story": "Today is 8 February 2026. Wallet payment of ₹600 failed on 9 January 2026\n    but money was debited and refund not received.",
+    "api_response": {
+      "transaction_amount": "600",
+      "transaction_date": "9 January 2026",
+      "compensation_eligible": true,
+      "compensation_amount": "2900",
+      "other_info": "User reported a failed wallet payment of ₹600 on 9 January 2026 where money was debited but refund not received. Both transaction amount and date are present. Since auto-reversal was not done by T+1 day, compensation applies. Delay is from 10 January 2026 to 8 February 2026, which is 29 days. Compensation is Rs 100 per day of delay beyond T+1, totaling Rs 2900.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 16,
+    "user_story": "Today is 8 February 2026. Merchant refunded ₹2,700 on 3 January 2026 but money\n    still not credited into my account.",
+    "api_response": {
+      "transaction_amount": "2700",
+      "transaction_date": "3 January 2026",
+      "compensation_eligible": true,
+      "compensation_amount": "3100",
+      "other_info": "User reported a refund of ₹2700 on 3 January 2026 that has not been credited by 8 February 2026. Both transaction amount and date are present. The delay beyond T+5 days is 31 days (from 8 January to 8 February). Compensation is Rs 100 per day of delay beyond T+5, resulting in Rs 3100. User is eligible for compensation.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 17,
+    "user_story": "Today is 8 February 2026. Bank charged ATM withdrawal fee wrongly on 7 January 2026\n    even though transaction failed.",
+    "api_response": {
+      "transaction_amount": "none",
+      "transaction_date": "7 January 2026",
+      "compensation_eligible": false,
+      "compensation_amount": "none",
+      "other_info": "Transaction date is provided as 7 January 2026, but transaction amount is missing. Eligibility requires both amount and date. Therefore, user is not eligible for compensation.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 18,
+    "user_story": "Today is 8 February 2026. Cash deposit machine accepted ₹10,000 on 6 January 2026\n    but amount not credited to my account.",
+    "api_response": {
+      "transaction_amount": "10000",
+      "transaction_date": "6 January 2026",
+      "compensation_eligible": true,
+      "compensation_amount": "2800",
+      "other_info": "User reported a cash deposit of ₹10,000 on 6 January 2026 not credited to account as of 8 February 2026. Both transaction amount and date are present. According to the rule, compensation applies if reversal is not done within T+5 days. The delay is 33 days beyond T+5 (total 38 days - 5 days), so compensation is 33 x ₹100 = ₹3300. However, since the rule states Rs 100 per day beyond T+5, the calculation is 33 days x 100 = ₹3300. Correction: The calculation should be 33 days x 100 = ₹3300. Therefore, compensation amount is ₹3300.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 19,
+    "user_story": "Today is 8 February 2026. EMI auto debit of ₹5,000 failed on 8 January 2026 but\n    penalty got applied by lender due to delay.",
+    "api_response": {
+      "transaction_amount": "5000",
+      "transaction_date": "8 January 2026",
+      "compensation_eligible": true,
+      "compensation_amount": "minimum Rs 100 plus penalty amount",
+      "other_info": "User reported a failed EMI auto debit of ₹5,000 on 8 January 2026 with penalty applied due to delay. Both transaction amount and date are present. Eligibility is true as the failure is attributable to the bank. Compensation includes interest at savings bank rate for the delay period (minimum Rs 100) plus any penalties incurred.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 20,
+    "user_story": "Today is 8 February 2026. Chargeback refund of ₹3,300 promised on 5 January 2026\n    has not yet been credited.",
+    "api_response": {
+      "transaction_amount": "3300",
+      "transaction_date": "2026-01-05",
+      "compensation_eligible": true,
+      "compensation_amount": "1300",
+      "other_info": "The user reported a chargeback refund of ₹3,300 promised on 5 January 2026 but not credited by 8 February 2026. Both transaction amount and date are present. The delay is from 7 January 2026 (T+1) to 8 February 2026, totaling 32 days of delay. According to the rule, compensation is Rs 100 per day of delay beyond T+1, resulting in Rs 3200. However, since the calculation method is Rs 100 per day, the compensation amount is Rs 3200. The user is eligible for compensation.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 21,
+    "user_story": "Today is 8 February 2026. Credit card refund of ₹4,500 processed on 2 January 2026\n    is still not reflected in account.",
+    "api_response": {
+      "transaction_amount": "4500",
+      "transaction_date": "2 January 2026",
+      "compensation_eligible": false,
+      "compensation_amount": "none",
+      "other_info": "Transaction amount and date are present. However, the complaint is about a delayed refund reflection, not a card closure delay. The matched compensation rule applies only to delayed card closure after request with no outstanding dues. Therefore, user is not eligible for compensation under this rule.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 22,
+    "user_story": "Today is 8 February 2026. ATM withdrawal of ₹4,000 was debited twice on\n    10 January 2026.",
+    "api_response": {
+      "transaction_amount": "4000",
+      "transaction_date": "10 January 2026",
+      "compensation_eligible": true,
+      "compensation_amount": "300",
+      "other_info": "User reported a double debit of ₹4,000 on 10 January 2026 for an ATM withdrawal where cash was not dispensed. The complaint was made on 8 February 2026, which is 29 days after the transaction date. Since the reversal was not done within T+5 days (i.e., by 15 January 2026), the user is eligible for compensation. The delay beyond T+5 days is 24 days (29 - 5), so compensation is Rs 100 x 24 = Rs 240. However, as per the calculation method, Rs 100 per day of delay is applied strictly, so compensation amount is Rs 240.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 23,
+    "user_story": "Today is 8 February 2026. ATM withdrawal of ₹6,000 failed on 5 January 2026 but\n    amount got debited.",
+    "api_response": {
+      "transaction_amount": "6000",
+      "transaction_date": "5 January 2026",
+      "compensation_eligible": true,
+      "compensation_amount": "2900",
+      "other_info": "User reported a failed ATM withdrawal of ₹6,000 on 5 January 2026 where the amount was debited but cash not dispensed. The reversal was not done within T+5 calendar days. Since today is 8 February 2026, the delay beyond T+5 days is 29 days, making the user eligible for compensation of Rs 100 per day, totaling Rs 2900.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 24,
+    "user_story": "Today is 8 February 2026. Restaurant POS machine declined payment of ₹1,800 on\n    9 January 2026 but account was charged.",
+    "api_response": {
+      "transaction_amount": "1800",
+      "transaction_date": "9 January 2026",
+      "compensation_eligible": true,
+      "compensation_amount": "3000",
+      "other_info": "User reported a failed POS payment of ₹1800 on 9 January 2026 that was charged but declined. Both transaction amount and date are present. Since today is 8 February 2026, the delay beyond T+5 days is 30 days (from 14 January to 8 February). Compensation is Rs 100 per day of delay beyond T+5, so 30 x 100 = Rs 3000. User is eligible for compensation.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 25,
+    "user_story": "Today is 8 February 2026. Due to technical error, ₹900 got deducted wrongly from\n    my bank account on 13 January 2026.",
+    "api_response": {
+      "transaction_amount": "900",
+      "transaction_date": "13 January 2026",
+      "compensation_eligible": true,
+      "compensation_amount": "1300",
+      "other_info": "The user reported a failed UPI P2P transfer of ₹900 debited on 13 January 2026. Both transaction amount and date are present. Since today is 8 February 2026, the delay beyond T+1 day is 25 days (from 15 January to 8 February). Compensation is Rs 100 per day of delay, totaling Rs 2500. However, the calculation method specifies Rs 100 per day of delay beyond T+1, so 25 days * 100 = Rs 2500. The user is eligible for compensation due to the delay in auto-reversal.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 26,
+    "user_story": "Today is 8 February 2026. Airline refunded ₹7,000 for ticket cancellation on\n    4 January 2026 but amount not credited yet.",
+    "api_response": {
+      "transaction_amount": "7000",
+      "transaction_date": "4 January 2026",
+      "compensation_eligible": false,
+      "compensation_amount": "none",
+      "other_info": "Transaction amount and date are present. However, the complaint is about a delayed refund credit, not a delayed card closure. Therefore, the user is not eligible under the 'Credit Card - Delayed Closure' compensation rule.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 27,
+    "user_story": "Today is 8 February 2026. QR payment of ₹850 failed on 12 January 2026 but amount\n    got debited from account.",
+    "api_response": {
+      "transaction_amount": "850",
+      "transaction_date": "12 January 2026",
+      "compensation_eligible": true,
+      "compensation_amount": "1200",
+      "other_info": "User reported a failed QR payment of ₹850 on 12 January 2026 which was debited but not credited to beneficiary. Today's date is 8 February 2026. Both transaction amount and date are present. Delay beyond T+1 day is 26 days (from 14 January to 8 February). Compensation is Rs 100 per day of delay, totaling Rs 2600. However, since the calculation method states Rs 100 per day of delay beyond T+1, the compensation amount is Rs 100 x 26 = Rs 2600.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 28,
+    "user_story": "Today is 8 February 2026. Mobile banking payment of ₹2,100 failed on\n    15 January 2026 but amount deducted.",
+    "api_response": {
+      "transaction_amount": "2100",
+      "transaction_date": "15 January 2026",
+      "compensation_eligible": true,
+      "compensation_amount": "1300",
+      "other_info": "User reported a failed UPI P2P transfer of ₹2100 on 15 January 2026 with amount deducted but beneficiary not credited. Both transaction amount and date are present. Today is 8 February 2026, so delay beyond T+1 (16 January 2026) is 23 days. Compensation is Rs 100 per day of delay beyond T+1, totaling Rs 2300. However, since the calculation method states Rs 100 per day, the compensation amount is Rs 2300. Correction: The compensation amount should be Rs 2300, not 1300. Recalculating: From 16 January to 8 February is 23 days, so 23 * 100 = 2300. Therefore, compensation_amount is 2300.",
+      "bank_name": null,
+      "links": null
+    }
+  }
+]
