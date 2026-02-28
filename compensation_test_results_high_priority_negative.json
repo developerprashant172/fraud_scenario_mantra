@@ -1,0 +1,148 @@
+[
+  {
+    "scenario_id": 1,
+    "label": "NEG UPI - missing amount",
+    "user_story": "Today is 8 February 2026. I am an Axis Bank customer.\nLast week I sent some money using UPI to a friend's UPI ID.\nThe amount was debited from my account but my friend never received the money.\nI do not remember the exact transaction amount or the exact date, but it was in early January 2026.\nNo refund has been received till now and I want to know if I am eligible for compensation.",
+    "api_response": {
+      "transaction_amount": "none",
+      "transaction_date": "none",
+      "compensation_eligible": false,
+      "compensation_amount": "none",
+      "other_info": "Thank you for sharing the details. To assist you better, could you please provide the exact date of the transaction and the exact amount that was sent? This information will help us check your eligibility for compensation.",
+      "bank_name": "Axis Bank",
+      "links": {
+        "compensation_policy": "https://mantr2024.sharepoint.com/:b:/s/Mantr-Global/IQD2pT-F6u4TToYJlM1C64r0Acq5BRtvlT7IjAaG7DdzpMw?e=y68a1k",
+        "grievance_policy": "https://www.axis.bank.in/docs/default-source/default-document-library/grievance-redressal/grievance-redressal-policy.pdf"
+      }
+    }
+  },
+  {
+    "scenario_id": 2,
+    "label": "NEG ATM - missing refund date",
+    "user_story": "Today is 8 February 2026. I am an SBI customer.\nOn 3 January 2026 I tried withdrawing ₹5,000 from an ATM in Delhi.\nThe machine showed processing but cash never came out while my account was debited.\nI raised a complaint but I am not sure on which exact date the refund came back to my account.\nPlease check whether I am eligible for any ATM failed transaction compensation.",
+    "api_response": {
+      "transaction_amount": "none",
+      "transaction_date": "none",
+      "compensation_eligible": false,
+      "compensation_amount": "none",
+      "other_info": "Thank you for sharing the details. To check your eligibility for ATM failed transaction compensation, could you please confirm the exact date when the refund was credited back to your account? Also, please confirm the exact amount debited during the transaction. This information will help us assist you better.",
+      "bank_name": "SBI",
+      "links": {
+        "compensation_policy": "SBI.pdf",
+        "grievance_policy": "https://sbi.bank.in/documents/53471/263971/Customer+Rights+Grievance+Redressal+and+Compensation+Policy+2024%28Version+5%29.pdf/0200f401-cbc8-68d2-d1a7-a74d305d5332?t=1745317199634"
+      }
+    }
+  },
+  {
+    "scenario_id": 3,
+    "label": "NEG NEFT - missing delay days",
+    "user_story": "Today is 8 February 2026. I initiated a NEFT transfer from my ICICI Bank account\naround mid-January 2026. The beneficiary told me that the credit was delayed compared to\nthe normal NEFT credit timelines, but I do not know the exact debit date or the exact date\non which the funds were credited. I also do not recall the exact amount transferred.\nI want to know if I am eligible for any NEFT delay compensation.",
+    "api_response": {
+      "transaction_amount": "none",
+      "transaction_date": "none",
+      "compensation_eligible": false,
+      "compensation_amount": "none",
+      "other_info": "To check your eligibility for NEFT delay compensation, could you please provide the exact date when the amount was debited from your ICICI Bank account, the exact date when the beneficiary received the funds, and the exact amount transferred? This information will help us assist you better.",
+      "bank_name": "ICICI Bank",
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 4,
+    "label": "NEG RTGS - missing amount",
+    "user_story": "Today is 8 February 2026. I sent a large RTGS payment from my HDFC Bank account\nin the first week of January 2026. The beneficiary informed me that the credit was given\nwith some delay beyond the RTGS cut-off, but I do not remember the exact transaction amount\nor the exact dates of debit and credit. I want to check if any RTGS delay compensation applies.",
+    "api_response": {
+      "transaction_amount": "none",
+      "transaction_date": "none",
+      "compensation_eligible": false,
+      "compensation_amount": "none",
+      "other_info": "To check if any RTGS delay compensation applies, could you please provide the exact date when the amount was debited from your account and the exact date when the beneficiary received the credit? Also, if possible, please share the transaction amount. This will help us assist you better.",
+      "bank_name": "HDFC Bank",
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 5,
+    "label": "NEG Cheque - missing interest rate",
+    "user_story": "Today is 8 February 2026. I deposited an outstation cheque into my savings account\nat the beginning of January 2026. The cheque was credited several days later than the usual\ncollection timeline, but I do not know my savings bank interest rate or the exact number of days\nof delay. I would like to know if I am eligible for any cheque collection delay compensation.",
+    "api_response": {
+      "transaction_amount": "none",
+      "transaction_date": "none",
+      "compensation_eligible": false,
+      "compensation_amount": "none",
+      "other_info": "Thank you for your message. To check your eligibility for compensation, could you please provide the exact date when the cheque was deposited, the date it was credited to your account, the amount of the cheque, and your savings account interest rate if you know it? This information will help us assist you better.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 6,
+    "label": "NEG NACH credit - missing due date",
+    "user_story": "Today is 8 February 2026. A NACH credit for a government subsidy was expected\ninto my account sometime in early January 2026. The amount was credited after a few days'\ndelay compared to when I was told it would come, but I do not know the exact due date or\nthe exact credit date. I want to understand if any NACH/APBS credit delay compensation is possible.",
+    "api_response": {
+      "transaction_amount": "none",
+      "transaction_date": "none",
+      "compensation_eligible": false,
+      "compensation_amount": "none",
+      "other_info": "Thank you for sharing the details. To check if any compensation is possible, could you please provide the exact date when the subsidy was expected to be credited and the exact date it was actually credited to your account? Additionally, if you know the exact amount credited, that would be helpful.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 7,
+    "label": "NEG NACH mandate - missing revocation date",
+    "user_story": "Today is 8 February 2026. I had asked my bank to revoke a NACH mandate for a loan EMI,\nbut I do not remember the exact date on which the revocation became effective.\nAfter that, the bank still debited one more EMI from my account and reversed it later.\nI am not sure about the exact debit and reversal dates. I want to know if I can claim any\ncompensation for this NACH debit after revocation.",
+    "api_response": {
+      "transaction_amount": "none",
+      "transaction_date": "none",
+      "compensation_eligible": false,
+      "compensation_amount": "none",
+      "other_info": "Thank you for sharing the details. To check your eligibility for compensation, could you please provide the exact date when you requested the revocation of the NACH mandate? Also, if possible, share the dates and amounts of the EMI debit and the subsequent reversal from your account. This information will help us assist you better.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 8,
+    "label": "NEG Unauth zero - missing fraud date",
+    "user_story": "Today is 8 February 2026. A fraudulent online transaction happened on my debit card\nrecently and the bank later reversed the amount. I reported it quickly after getting the SMS alert,\nbut I do not recall the exact date of the fraud, the date I reported it, or the date of reversal.\nI want to know whether the zero-liability unauthorised electronic transaction rule can apply here.",
+    "api_response": {
+      "transaction_amount": "none",
+      "transaction_date": "none",
+      "compensation_eligible": false,
+      "compensation_amount": "none",
+      "other_info": "To check if the zero-liability rule applies, could you please provide the exact date of the fraudulent transaction, the date you reported it to the bank, and the date when the reversal or refund was credited to your account? This information will help us assist you accurately.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 9,
+    "label": "NEG Unauth limited - missing account segment",
+    "user_story": "Today is 8 February 2026. A third-party fraud happened through internet banking and\nabout ₹20,000 was debited from my account. I reported the fraud after a few days but within a week\nof the alert SMS. I am not sure what exact type of account I hold (basic, savings, current, etc.).\nI want to check if the limited-liability unauthorised electronic transaction rules give me any compensation.",
+    "api_response": {
+      "transaction_amount": "none",
+      "transaction_date": "none",
+      "compensation_eligible": false,
+      "compensation_amount": "none",
+      "other_info": "Thank you for sharing the details. To assist you better, could you please provide the exact date when the fraudulent transaction occurred and the date you reported the fraud to the bank? Also, if possible, please confirm the type of account you hold (such as savings, current, or basic). This information will help us check your eligibility for compensation.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 10,
+    "label": "NEG Unauth negligence - missing split before/after report",
+    "user_story": "Today is 8 February 2026. Due to my own mistake of sharing an OTP with a caller,\nmultiple fraudulent transactions were done on my account over a few days.\nI reported the issue to the bank at some point, but I do not remember how much was debited\nbefore I reported and how much was debited after reporting.\nI want to understand what part of the loss I may have to bear and what part the bank should bear\nunder the customer negligence rules.",
+    "api_response": {
+      "transaction_amount": "none",
+      "transaction_date": "none",
+      "compensation_eligible": false,
+      "compensation_amount": "none",
+      "other_info": "Thank you for sharing the details. To help you understand the compensation, could you please provide the exact date when you reported the fraudulent transactions to the bank? Also, if possible, please share the total amount debited from your account before and after you made the report. This information will help clarify the situation.",
+      "bank_name": null,
+      "links": null
+    }
+  }
+]

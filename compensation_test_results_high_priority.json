@@ -1,0 +1,148 @@
+[
+  {
+    "scenario_id": 1,
+    "label": "UPI failure - P2P credit not received",
+    "user_story": "Today is 8 February 2026. I am an Axis Bank customer.\nOn 12 January 2026 I sent ₹2,500 using UPI to my friend's UPI ID.\nThe amount was debited from my account but my friend never received the money.\nThe bank did not auto-reverse the amount by the usual UPI T+1 deadline (13 January 2026).\nThe refund finally reached my account only on 20 January 2026, which is 7 days after the T+1 deadline.\nI want compensation of ₹100 per day of delay beyond T+1 as per the failed UPI transaction rules.",
+    "api_response": {
+      "transaction_amount": "2500",
+      "transaction_date": "2026-01-12",
+      "compensation_eligible": true,
+      "compensation_amount": "100",
+      "other_info": "Thank you for reaching out about your UPI transaction issue with Axis Bank. Since your refund was delayed beyond the usual T+1 deadline by 7 days, you are eligible for compensation as per RBI guidelines for failed UPI transactions. The bank has calculated a compensation amount of ₹100 for the delay. This amount will be paid entirely by the bank, and you do not have any liability in this case. The compensation is based on the delay in refund beyond the expected timeline, rewarding you for the inconvenience caused. Axis Bank follows RBI’s rules on such matters and has processed the compensation accordingly. We appreciate your patience and are here to help if you need further assistance.",
+      "bank_name": "Axis Bank",
+      "links": {
+        "compensation_policy": "https://mantr2024.sharepoint.com/:b:/s/Mantr-Global/IQD2pT-F6u4TToYJlM1C64r0Acq5BRtvlT7IjAaG7DdzpMw?e=y68a1k",
+        "grievance_policy": "https://www.axis.bank.in/docs/default-source/default-document-library/grievance-redressal/grievance-redressal-policy.pdf"
+      }
+    }
+  },
+  {
+    "scenario_id": 2,
+    "label": "ATM cash withdrawal - cash not dispensed",
+    "user_story": "Today is 8 February 2026. I am an SBI customer.\nOn 3 January 2026 I tried withdrawing ₹5,000 from an ATM in Delhi.\nThe machine showed processing but cash never came out while my account was debited.\nThe bank did not reverse the debit within the T+5 days ATM reversal period (by 8 January 2026).\nThe amount was finally reversed only on 18 January 2026, well after T+5.\nI want compensation of ₹100 per day of delay beyond T+5 as per the ATM failed transaction rules.",
+    "api_response": {
+      "transaction_amount": "5000",
+      "transaction_date": "2026-01-03",
+      "compensation_eligible": true,
+      "compensation_amount": "1000",
+      "other_info": "Dear customer, thank you for reaching out. Since your ATM withdrawal on 3 January 2026 did not dispense cash but your account was debited, and the reversal happened only on 18 January 2026, which is beyond the standard T+5 days period, you are eligible for compensation. The bank should pay you ₹1000 as compensation for the delay in refunding your amount. This amount reflects a compensation of ₹100 for each day of delay beyond the 5-day reversal window. There is no liability on your part, and the full compensation is borne by SBI. SBI follows RBI guidelines for such ATM transaction failures and compensates customers accordingly to ensure timely resolution and customer satisfaction.",
+      "bank_name": "SBI",
+      "links": {
+        "compensation_policy": "SBI.pdf",
+        "grievance_policy": "https://sbi.bank.in/documents/53471/263971/Customer+Rights+Grievance+Redressal+and+Compensation+Policy+2024%28Version+5%29.pdf/0200f401-cbc8-68d2-d1a7-a74d305d5332?t=1745317199634"
+      }
+    }
+  },
+  {
+    "scenario_id": 3,
+    "label": "NEFT credit delay",
+    "user_story": "Today is 8 February 2026. I initiated a NEFT transfer of ₹50,000 from my ICICI Bank account\non 15 January 2026 to another bank. The beneficiary bank did not credit the amount within the\nnormal NEFT credit timeline and the funds were actually credited only 3 days later.\nI want compensation for the delay in credit as per NEFT Repo+2% rules.",
+    "api_response": {
+      "transaction_amount": "50000",
+      "transaction_date": "2026-01-15",
+      "compensation_eligible": true,
+      "compensation_amount": "34.93",
+      "other_info": "Dear customer, you are eligible for compensation because your NEFT transfer of ₹50,000 initiated on 15 January 2026 was credited to the beneficiary’s account with a delay beyond the normal NEFT timeline. As per RBI guidelines, ICICI Bank will pay you ₹34.93 as compensation for this delay. There is no liability on your part, and the entire compensation amount is borne by the bank. This compensation is calculated based on the delay period and the applicable interest rate (Repo rate plus 2%), reflecting the loss you incurred due to the late credit. ICICI Bank follows these RBI rules to ensure customers are fairly compensated in such situations.",
+      "bank_name": "ICICI Bank",
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 4,
+    "label": "RTGS credit delay",
+    "user_story": "Today is 8 February 2026. I sent ₹2,00,000 using RTGS from my HDFC Bank account\non 10 January 2026. The beneficiary account should have been credited almost immediately,\nbut the credit was actually given only on 11 January 2026, one full day later beyond the RTGS cut-off.\nThe current RBI repo rate is 6.5%, so the compensation rate should be 8.5% per annum (Repo + 2%)\non the RTGS amount for at least 1 day of delay.\nI am seeking compensation for this RTGS delay as per the Repo+2% guidelines.",
+    "api_response": {
+      "transaction_amount": "200000",
+      "transaction_date": "2026-01-10",
+      "compensation_eligible": true,
+      "compensation_amount": "3572.6",
+      "other_info": "Thank you for reaching out about the delay in your RTGS transaction from your HDFC Bank account. Since your payment of ₹2,00,000 was credited to the beneficiary account one day later than the expected RTGS timeline, you are eligible for compensation. The bank should pay you ₹3,572.60 as compensation for this delay.\n\nThis amount was calculated based on the RBI guideline of paying interest at the rate of the current repo rate plus 2% for the period of delay—in your case, one day. Essentially, the bank compensates you for the inconvenience and the cost of the delay by applying this interest rate to the transaction amount for the time it was delayed.\n\nHDFC Bank follows these RBI guidelines and has processed your compensation accordingly. There is no liability on your part, and the full compensation amount is borne by the bank. We hope this clarifies the situation and assures you that your concern has been addressed fairly.",
+      "bank_name": "HDFC Bank",
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 5,
+    "label": "Cheque collection delay",
+    "user_story": "Today is 8 February 2026. I deposited an outstation cheque of ₹20,000 into my savings account\non 1 January 2026. As per the bank's cheque collection policy, the cheque should have been cleared\nwithin 10 days (by 11 January 2026), but it was actually credited only on 16 January 2026,\nwhich is a delay of 5 days beyond the policy TAT.\nMy savings bank interest rate is 3% per annum, and compensation should be calculated at 3% for 5 days\non ₹20,000 as per the cheque collection delay grid.\nI want compensation for the delay in cheque collection as per the bank's policy grid.",
+    "api_response": {
+      "transaction_amount": "none",
+      "transaction_date": "none",
+      "compensation_eligible": false,
+      "compensation_amount": "none",
+      "other_info": "Thank you for the details provided. To help calculate your compensation accurately, could you please confirm the exact date on which the cheque amount was credited to your account? Also, please confirm the date when you reported this delay to the bank.",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 6,
+    "label": "NACH credit delay",
+    "user_story": "Today is 8 February 2026. A NACH credit for a government subsidy of ₹1,200 was due to be credited\nto my account on 5 January 2026. However, the bank credited the amount only on 9 January 2026,\nwhich is beyond the T+1 day NACH/APBS credit timeline.\nI am asking for compensation for this NACH credit delay.",
+    "api_response": {
+      "transaction_amount": "1200",
+      "transaction_date": "2026-01-05",
+      "compensation_eligible": true,
+      "compensation_amount": "300",
+      "other_info": "Dear Customer, your NACH credit of ₹1,200 was credited to your account later than the expected T+1 day timeline, which means there was a delay beyond the usual processing time. Because of this delay, you are eligible for compensation. The bank will pay you ₹300 as compensation for the inconvenience caused. There is no liability on your part, and the entire compensation amount is borne by the bank. This compensation is calculated based on RBI guidelines that consider the delay in crediting government subsidy payments and the resulting inconvenience to customers. If you have any further questions, feel free to ask!",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 7,
+    "label": "NACH mandate - debit after revocation",
+    "user_story": "Today is 8 February 2026. I revoked a NACH mandate for a loan EMI from my HDFC Bank account\non 1 January 2026 and the bank confirmed the revocation. Despite this, the bank still debited\n₹5,000 on 3 January 2026 under the old mandate and reversed it only on 10 January 2026.\nI want compensation for the delay in resolving this wrongful NACH debit after revocation.",
+    "api_response": {
+      "transaction_amount": "5000",
+      "transaction_date": "2026-01-01",
+      "compensation_eligible": true,
+      "compensation_amount": "800",
+      "other_info": "Thank you for sharing your concern. Since you revoked the NACH mandate on January 1, 2026, but the bank still debited ₹5,000 on January 3 under the old mandate and reversed it only on January 10, you are eligible for compensation due to the delay in correcting this wrongful debit. The bank should pay you ₹800 as compensation for this inconvenience. This amount reflects the compensation calculated based on the delay in refunding the amount after your revocation, considering the time the funds were wrongly held. HDFC Bank follows RBI guidelines to ensure customers are fairly compensated in such cases, and this compensation aligns with their policy to protect your interests.",
+      "bank_name": "HDFC Bank",
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 8,
+    "label": "Unauthorised electronic txn - zero liability",
+    "user_story": "Today is 8 February 2026. A fraudulent online transaction of ₹30,000 was done on my debit card\non 1 January 2026 without my knowledge. I received the SMS alert the same day and reported the fraud\nto the bank on 2 January 2026, within 3 working days. The bank reversed the principal amount only\non 12 January 2026. I want compensation for interest loss under the zero liability rule.",
+    "api_response": {
+      "transaction_amount": "30000",
+      "transaction_date": "2026-01-01",
+      "compensation_eligible": true,
+      "compensation_amount": "27.12",
+      "other_info": "Thank you for reporting the fraudulent transaction promptly and within the required time. Since you reported the unauthorized debit card transaction of ₹30,000 within 3 working days, you are eligible for compensation under the RBI's zero liability rule. The bank has reversed the principal amount, and in addition, you are entitled to compensation for the interest loss during the period the money was with the bank. The compensation amount calculated is ₹27.12, which the bank will pay to you. This amount reflects the interest you lost because the bank took some time to refund the money after your report. The rule ensures you do not bear any financial loss due to the delay in refunding the unauthorized transaction. If you have any further questions, feel free to ask!",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 9,
+    "label": "Unauthorised electronic txn - limited liability (4-7 days)",
+    "user_story": "Today is 8 February 2026. I hold a normal savings bank account. A third-party fraud of ₹20,000\nhappened through internet banking on 1 January 2026.\nI did NOT share any OTP, PIN, password, or credentials at any time and there was no negligence on my part.\nThe fraud was due to a third-party breach. I reported the fraud to the bank on 6 January 2026,\nwhich is between 4 and 7 working days from the alert.\nUnder the RBI 'unauthorised electronic transaction - limited liability (4-7 days)' framework,\nfor a normal savings bank account my account segment should be treated as savings/PPIs with the\nrelevant liability cap, not as customer negligence.\nI want compensation as per the limited liability rules for savings bank accounts.",
+    "api_response": {
+      "transaction_amount": "none",
+      "transaction_date": "none",
+      "compensation_eligible": false,
+      "compensation_amount": "none",
+      "other_info": "Thank you for the details provided. To assist you further, could you please confirm the exact date when you first noticed or were alerted to the fraudulent transaction? Also, has the bank issued any communication or partial refund regarding this case so far?",
+      "bank_name": null,
+      "links": null
+    }
+  },
+  {
+    "scenario_id": 10,
+    "label": "Unauthorised electronic txn - customer negligence",
+    "user_story": "Today is 8 February 2026. I mistakenly shared an OTP with a caller and due to this,\nfraudulent debits of ₹40,000 happened from my account before I reported the incident to the bank\non 5 January 2026. After I reported, an additional fraudulent debit of ₹5,000 was attempted and\nwent through before the bank could block the channel. I want the bank to apply the customer\nnegligence rules where I bear losses before reporting but the bank bears losses after reporting.",
+    "api_response": {
+      "transaction_amount": "45000",
+      "transaction_date": "none",
+      "compensation_eligible": true,
+      "compensation_amount": "5000",
+      "other_info": "Thank you for sharing the details of your case. Since you shared the OTP before reporting the fraud, the bank’s rules consider this as customer negligence for the losses that happened before you informed them. Therefore, you are responsible for the ₹40,000 lost before you reported the issue on 5 January. After you reported the fraud, the bank took action, but an additional ₹5,000 was still debited before they could block the channel. According to RBI guidelines, the bank bears the loss for this amount. So, the bank will compensate you ₹5,000, while you bear the ₹40,000 loss. This approach is based on the principle that customers are liable for losses due to their own negligence before reporting, but the bank covers losses occurring after they are informed and have a chance to act. Since no specific bank policy was mentioned, this explanation follows the standard RBI customer negligence rules.",
+      "bank_name": null,
+      "links": null
+    }
+  }
+]
