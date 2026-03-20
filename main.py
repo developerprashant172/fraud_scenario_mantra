@@ -168,10 +168,28 @@ Your tasks:
    - "unauth_zero"
    - "unauth_limited"
    - "unauth_negligence"
+   - "cir_credit_report_correction_delay"
+   - "card_to_card_transfer_failure"
+   - "cheque_lost_in_transit"
+   - "cheque_paid_after_stop_payment"
+   - "credit_card_delayed_closure"
+   - "credit_card_issued_without_consent"
+   - "loan_security_docs_delay"
+   - "ecs_direct_debit_failed_delayed_execution"
+   - "erroneous_debit_bank_error"
+   - "imps_failure"
+   - "fixed_deposit_failed_action_maturity_instruction"
+   - "investment_redemption_slip_processing_delay"
+   - "duplicate_demand_draft_delay"
+   - "locker_loss_bank_negligence"
+   - "bank_agent_violation"
 
 2. For that scenario ONLY, extract the exact parameters needed for calculation.
    You MUST normalise all dates to ISO format "YYYY-MM-DD".
    If a field is not present or cannot be inferred, return "none" for that field.
+   Special notes:
+   - For `scenario_type="upi"`, set `tat_days=1` for Failed UPI P2P and `tat_days=5` for Failed UPI P2M.
+   - For `scenario_type="atm"`, set `tat_days=5` for failed ATM cash withdrawal or ATM POS/e-commerce card transactions.
 
 3. DO NOT calculate the compensation amount yourself.
    The backend will perform the rupee calculation using these parameters.
@@ -179,7 +197,7 @@ Your tasks:
 Return ONLY a valid JSON object exactly in this format (fields may still be "none"):
 
 {{
- "scenario_type": "upi | atm | neft | rtgs | cheque | nach_credit | nach_mandate | unauth_zero | unauth_limited | unauth_negligence",
+ "scenario_type": "upi | atm | neft | rtgs | cheque | nach_credit | nach_mandate | unauth_zero | unauth_limited | unauth_negligence | cir_credit_report_correction_delay | card_to_card_transfer_failure | cheque_lost_in_transit | cheque_paid_after_stop_payment | credit_card_delayed_closure | credit_card_issued_without_consent | loan_security_docs_delay | ecs_direct_debit_failed_delayed_execution | erroneous_debit_bank_error | imps_failure | fixed_deposit_failed_action_maturity_instruction | investment_redemption_slip_processing_delay | duplicate_demand_draft_delay | locker_loss_bank_negligence | bank_agent_violation",
 
  "transaction_amount": "... or none",
 
@@ -205,7 +223,54 @@ Return ONLY a valid JSON object exactly in this format (fields may still be "non
  "fraud_amount_after_report": "... or none",
  "account_segment": "... or none",
 
- "notes": "Short natural language summary of how you mapped the user story and rule to this scenario and parameters."
+ "notes": "Short natural language summary of how you mapped the user story and rule to this scenario and parameters.",
+
+ "delay_days": "... or none",
+
+ "dispute_filed_date_iso": "... or none",
+
+ "cheque_collection_tat_days": "... or none",
+ "cheque_collection_rate": "... or none",
+ "documented_costs_total": "... or none",
+ "downstream_charges_impact_total": "... or none",
+
+ "closure_actual_date_iso": "... or none",
+ "delay_working_days_beyond_t_plus_7": "... or none",
+ "outstanding_dues_present": "... or none",
+ "charges_reversed_total": "... or none",
+ "card_used": "... or none",
+
+ "delay_days_working_over_tat": "... or none",
+ "premium_product": "... or none",
+ "cap_amount": "... or none",
+
+ "scheduled_date_iso": "... or none",
+ "executed_date_iso": "... or none",
+ "customer_penalties_total": "... or none",
+ "mandate_valid": "... or none",
+
+ "interest_loss_amount": "... or none",
+ "downstream_charges_reversal_amount": "... or none",
+ "staff_fraud": "... or none",
+
+ "lost_interest_amount": "... or none",
+ "intended_interest_amount": "... or none",
+ "actual_interest_amount": "... or none",
+
+ "is_sgb_rejection": "... or none",
+ "refund_delay_days_beyond_t_plus_1_working": "... or none",
+ "investment_amount": "... or none",
+ "submission_date_iso": "... or none",
+ "processing_date_iso": "... or none",
+
+ "sb_rate": "... or none",
+ "lump_sum_compensation_amount": "... or none",
+ "request_date_iso": "... or none",
+ "duplicate_issued_date_iso": "... or none",
+ "fd_rate_corresponding_maturity": "... or none",
+
+ "annual_locker_rent": "... or none",
+ "actual_direct_financial_loss_amount": "... or none"
 }}
 
 Do not return anything outside JSON.
