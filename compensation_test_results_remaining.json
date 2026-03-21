@@ -2,13 +2,13 @@
   {
     "scenario_id": 1,
     "label": "CIR / Credit-Report Correction Delay",
-    "user_story": "Today is 8 February 2026. I filed a CIR / credit-report dispute with my bank on 1 January 2026.\nThe corrected data was sent/resolved on 20 February 2026.\nPlease calculate compensation as Rs 100 per day beyond the 30-day correction window.",
+    "user_story": "Today is 1 March 2026. I filed a CIR / credit-report dispute with my bank on 1 January 2026.\nThe corrected data was sent/resolved on 20 February 2026.\nPlease calculate compensation as Rs 100 per day beyond the 30-day correction window.",
     "api_response": {
       "transaction_amount": "none",
       "transaction_date": "2026-02-20",
       "compensation_eligible": true,
       "compensation_amount": "2000",
-      "other_info": "You are eligible for compensation because the bank took longer than the allowed 30 days to correct your credit report dispute. Since you filed on 1 January 2026 and the correction was completed on 20 February 2026, the delay exceeded the 30-day window. The bank should pay you Rs 2000 as compensation for this delay. This amount is fully borne by the bank, with no liability on your part. The compensation was calculated based on the number of days beyond the 30-day correction period, at Rs 100 per day, as per RBI guidelines.",
+      "other_info": "You are eligible for compensation because the bank took longer than the allowed 30 days to correct your credit report dispute. Since you filed the dispute on 1 January 2026 and the correction was completed on 20 February 2026, the delay beyond the 30-day window has been recognized. The bank should pay you Rs 2000 as compensation for this delay. This amount has been calculated based on Rs 100 per day for the extra days beyond the 30-day correction period. There is no liability on your part, and the entire compensation is borne by the bank. The calculation follows RBI guidelines for delays in credit report corrections, ensuring you are fairly compensated for the inconvenience caused.",
       "bank_name": null,
       "links": null
     }
@@ -16,13 +16,13 @@
   {
     "scenario_id": 2,
     "label": "Card to Card Transfer Failure (T+1)",
-    "user_story": "Today is 8 February 2026. I tried transferring from one card to another card on 10 January 2026 for ₹12,000.\nThe beneficiary card did not get credited and it was resolved only on 12 January 2026.\nAssume T+1 applies, so compute Rs 100 per day beyond T+1.",
+    "user_story": "Today is 1 March 2026. I tried transferring from one card to another card on 10 January 2026 for ₹12,000.\nThe beneficiary card did not get credited and it was resolved only on 12 January 2026.\nAssume T+1 applies, so compute Rs 100 per day beyond T+1.",
     "api_response": {
       "transaction_amount": "12000",
       "transaction_date": "2026-01-12",
       "compensation_eligible": true,
       "compensation_amount": "100",
-      "other_info": "You are eligible for compensation because your card-to-card transfer of ₹12,000 on 10 January 2026 was not credited on time and was only resolved on 12 January 2026. The bank should pay you ₹100 as compensation for the delay beyond the expected T+1 day processing time. There is no liability on your part, and the entire compensation amount is borne by the bank. The compensation was calculated based on the delay in crediting your beneficiary card after the usual one-day processing period. Since no specific bank name is mentioned, there is no additional note about the bank’s own policy.",
+      "other_info": "You are eligible for compensation because your card-to-card transfer of ₹12,000 made on 10 January 2026 was not credited to the beneficiary card on time and was only resolved on 12 January 2026. According to the rules, the bank pays ₹100 for each day of delay beyond the expected T+1 day. In your case, the bank has calculated and will pay you ₹100 as compensation. There is no liability on your part, and the entire compensation amount is borne by the bank. The delay rule means the bank compensates you for the inconvenience caused by the transfer not being completed within the usual one business day.",
       "bank_name": null,
       "links": null
     }
@@ -30,13 +30,13 @@
   {
     "scenario_id": 3,
     "label": "Cheque Lost in Transit",
-    "user_story": "Today is 8 February 2026. I deposited an outstation cheque of ₹20,000 on 1 January 2026.\nThe cheque was lost in transit and the actual credit/information came only on 25 January 2026.\nCheque collection TAT is 10 days and cheque collection interest rate is 3% per annum.\nSB interest rate is 3% per annum.\nMy documented costs (stop payment, duplicate, etc.) are ₹400, but the rule caps documented costs at ₹250.\nCompute compensation using: interest beyond TAT + interest for extra 15 days at SB rate + capped costs.",
+    "user_story": "Today is 1 March 2026. I deposited an outstation cheque of ₹20,000 on 1 January 2026.\nThe cheque was lost in transit and the actual credit/information came only on 25 January 2026.\nCheque collection TAT is 10 days and cheque collection interest rate is 3% per annum.\nSB interest rate is 3% per annum.\nMy documented costs (stop payment, duplicate, etc.) are ₹400, but the rule caps documented costs at ₹250.\nCompute compensation using: interest beyond TAT + interest for extra 15 days at SB rate + capped costs.",
     "api_response": {
       "transaction_amount": "none",
       "transaction_date": "none",
       "compensation_eligible": false,
       "compensation_amount": "none",
-      "other_info": "Thank you for the details provided. To help calculate your compensation accurately, could you please confirm the exact date when the ₹20,000 was credited to your account? Also, please confirm the date you reported the cheque as lost or initiated the stop payment process.",
+      "other_info": "Thank you for the details provided. To calculate your compensation accurately, could you please confirm the exact date when the cheque was reported lost or when you informed the bank about the issue? Also, please confirm the date when the amount was actually credited to your account.",
       "bank_name": null,
       "links": null
     }
@@ -44,13 +44,13 @@
   {
     "scenario_id": 4,
     "label": "Cheque Paid After Stop-Payment",
-    "user_story": "Today is 8 February 2026. I gave stop-payment instruction for a cheque of ₹25,000 before the bank presented it.\nHowever, the cheque was still paid and the credit/payment posted to my account on 10 January 2026.\nThe original debit date was 1 January 2026.\nSB interest rate is 3% per annum.\nDownstream charges/interest impact (min-balance penalty, extra interest impact, etc.) is ₹500.\nCompute compensation as: cheque amount reversal + value-dated interest impact + downstream charges impact.",
+    "user_story": "Today is 1 March 2026. I gave stop-payment instruction for a cheque of ₹25,000 before the bank presented it.\nHowever, the cheque was still paid and the credit/payment posted to my account on 10 January 2026.\nThe original debit date was 1 January 2026.\nSB interest rate is 3% per annum.\nDownstream charges/interest impact (min-balance penalty, extra interest impact, etc.) is ₹500.\nCompute compensation as: cheque amount reversal + value-dated interest impact + downstream charges impact.",
     "api_response": {
       "transaction_amount": "25000",
       "transaction_date": "2026-01-10",
       "compensation_eligible": true,
       "compensation_amount": "27349.32",
-      "other_info": "You are eligible for compensation because you gave a stop-payment instruction before the cheque was presented, but the bank still processed the payment on 10 January 2026. The bank will pay you a total compensation of ₹27,349.32. This amount includes the ₹25,000 cheque amount reversed, plus interest calculated for the period the funds were wrongly debited, and an additional ₹500 to cover any downstream charges or interest impacts caused by this error. The compensation covers the financial inconvenience and any penalties you faced due to the delay. Since there is no mention of any customer liability, the full amount is borne by the bank. The bank’s calculation follows RBI guidelines to ensure you are made whole for the mistake without you incurring any loss.",
+      "other_info": "You are eligible for compensation because you gave a stop-payment instruction before the cheque was presented, but the bank still processed the payment on 10 January 2026. The bank should pay you a total of ₹27,349.32 as compensation. This amount includes the ₹25,000 cheque amount reversed back to you, plus interest calculated from the date the cheque was wrongly paid until the stop-payment was given, and an additional ₹500 to cover any downstream charges or penalties you faced due to this error. The bank bears the full compensation amount since there is no customer liability here. The compensation calculation follows RBI guidelines, which ensure you are made whole for the cheque amount, the interest lost due to the delay, and any extra charges caused by the mistake.",
       "bank_name": null,
       "links": null
     }
@@ -58,13 +58,13 @@
   {
     "scenario_id": 5,
     "label": "Credit Card - Delayed Closure",
-    "user_story": "Today is 8 February 2026. I requested closure of my credit card on 1 January 2026.\nThere were no outstanding dues.\nThe bank failed to close the card within the required T+7 working days.\nIt got closed later, and the delay beyond T+7 working days is 5 working days.\nCompute compensation as Rs 500 per day beyond T+7.",
+    "user_story": "Today is 1 March 2026. I requested closure of my credit card on 1 January 2026.\nThere were no outstanding dues.\nThe bank failed to close the card within the required T+7 working days.\nIt got closed later, and the delay beyond T+7 working days is 5 working days.\nCompute compensation as Rs 500 per day beyond T+7.",
     "api_response": {
       "transaction_amount": "none",
-      "transaction_date": "none",
+      "transaction_date": "2026-03-01",
       "compensation_eligible": true,
       "compensation_amount": "2500",
-      "other_info": "You are eligible for compensation because your credit card closure was delayed beyond the required 7 working days after your request, even though there were no outstanding dues. The bank should pay you Rs 2,500 as compensation, which is Rs 500 for each of the 5 working days of delay beyond the T+7 period. This amount is fully borne by the bank. The compensation was calculated based on the rule that for delayed credit card closure, the bank pays a fixed amount per day of delay after the allowed time frame. Since the bank's name is not provided, there is no additional note about any specific bank policy.",
+      "other_info": "You are eligible for compensation because your credit card closure request was not completed within the required 7 working days, despite having no outstanding dues. The bank delayed the closure by 5 additional working days beyond the allowed period. As per the rules, the bank should pay you Rs 500 for each day of delay, which totals Rs 2500. This entire amount is borne by the bank as compensation to you. The compensation was calculated based on the delay beyond the standard closure timeline, ensuring you are fairly compensated for the inconvenience caused.",
       "bank_name": null,
       "links": null
     }
@@ -72,13 +72,13 @@
   {
     "scenario_id": 6,
     "label": "Credit Card - Issued Without Consent",
-    "user_story": "Today is 8 February 2026. A credit card was issued and activated without my written digital consent.\nI disputed the charges, and I did not use the card at all.\nTotal charges reversed due to the dispute are ₹1,500.\nCompute compensation as 2 × charges reversed.",
+    "user_story": "Today is 1 March 2026. A credit card was issued and activated without my written digital consent.\nI disputed the charges, and I did not use the card at all.\nTotal charges reversed due to the dispute are ₹1,500.\nCompute compensation as 2 × charges reversed.",
     "api_response": {
-      "transaction_amount": "1500",
+      "transaction_amount": "none",
       "transaction_date": "none",
-      "compensation_eligible": true,
-      "compensation_amount": "3000",
-      "other_info": "You are eligible for compensation because a credit card was issued and activated without your written digital consent, which is not allowed. Since you disputed the charges and did not use the card, the bank has calculated compensation as twice the amount of the reversed charges. Therefore, the bank should pay you ₹3,000 as compensation. There is no liability on your part. The compensation amount reflects the bank’s responsibility to make up for the inconvenience and any potential risk caused by issuing the card without your consent. Since no specific bank name was provided, there is no additional note about the bank’s own policy.",
+      "compensation_eligible": false,
+      "compensation_amount": "none",
+      "other_info": "Thank you for sharing the details. To process your compensation request, could you please provide the exact date when the credit card was issued and activated without your consent? Also, when did you report this issue to the bank?",
       "bank_name": null,
       "links": null
     }
@@ -86,13 +86,13 @@
   {
     "scenario_id": 7,
     "label": "Delay in Return of Loan Security Docs",
-    "user_story": "Today is 8 February 2026. I fully repaid my loan and repayment was completed on 1 January 2026.\nFor my product, the allowed return period is 15 working days.\nThe bank returned the title/security documents after an additional 20 working days beyond the allowed period.\nThis is NOT a premium product, so it is Rs 100 per week (not per day).\nCap amount for this compensation is ₹5,000.\nCompute the compensation accordingly.",
+    "user_story": "Today is 1 March 2026. I fully repaid my loan and repayment was completed on 1 January 2026.\nFor my product, the allowed return period is 15 working days.\nThe bank returned the title/security documents after an additional 20 working days beyond the allowed period.\nThis is NOT a premium product, so it is Rs 100 per week (not per day).\nCap amount for this compensation is ₹5,000.\nCompute the compensation accordingly.",
     "api_response": {
       "transaction_amount": "none",
       "transaction_date": "none",
       "compensation_eligible": true,
       "compensation_amount": "300",
-      "other_info": "You are eligible for compensation because the bank returned your loan security documents 20 working days later than the allowed 15 working days after your loan repayment was completed. Since this is not a premium product, the compensation rate is Rs 100 per week of delay, with a maximum cap of Rs 5,000. The bank will pay you Rs 300 as compensation for the delay. This amount reflects the delay period beyond the allowed time, calculated on a weekly basis, and capped as per the bank’s policy. There is no liability on your part, and the bank fully bears this compensation cost.",
+      "other_info": "You are eligible for compensation because the bank returned your loan security documents 20 working days later than the allowed 15 working days after your loan repayment was completed. The bank should pay you ₹300 as compensation. This amount is based on the standard rate of ₹100 per week of delay, capped at ₹5,000, and since your delay was about three weeks beyond the allowed period, the compensation is ₹300. The bank bears the full compensation amount, and there is no liability on your part. The calculation follows RBI guidelines for delays in returning loan security documents, ensuring fair compensation for the inconvenience caused.",
       "bank_name": null,
       "links": null
     }
@@ -100,13 +100,13 @@
   {
     "scenario_id": 8,
     "label": "ECS/Direct Debit - Failed/Delayed Execution",
-    "user_story": "Today is 8 February 2026. My valid ECS/Direct Debit mandate was scheduled to execute on 1 January 2026.\nDue to bank failure, it actually got executed on 6 January 2026.\nThe amount involved was ₹10,000.\nSB interest rate is 3% per annum.\nCustomer penalties/charges at other banks due to the failure are ₹500.\nCompute compensation as SB-rate interest for delay period (clamped between ₹100 and ₹1,000) + customer penalties.",
+    "user_story": "Today is 1 March 2026. My valid ECS/Direct Debit mandate was scheduled to execute on 1 January 2026.\nDue to bank failure, it actually got executed on 6 January 2026.\nThe amount involved was ₹10,000.\nSB interest rate is 3% per annum.\nCustomer penalties/charges at other banks due to the failure are ₹500.\nCompute compensation as SB-rate interest for delay period (clamped between ₹100 and ₹1,000) + customer penalties.",
     "api_response": {
       "transaction_amount": "10000",
       "transaction_date": "2026-01-06",
       "compensation_eligible": true,
       "compensation_amount": "910.96",
-      "other_info": "You are eligible for compensation because your ECS/Direct Debit payment was delayed by the bank, causing the transaction to happen 5 days later than scheduled. The bank should pay you a total of ₹910.96 as compensation. This amount includes the interest calculated at the savings bank rate for the delay period, adjusted to fall between ₹100 and ₹1,000, plus the ₹500 penalty charges you incurred at other banks due to this delay. The compensation covers the inconvenience and financial impact caused by the late debit. The bank bears the full compensation amount, and there is no liability on your part. The calculation follows RBI guidelines to ensure fair compensation for delayed ECS/Direct Debit transactions.",
+      "other_info": "You are eligible for compensation because your ECS/Direct Debit payment was delayed by the bank, causing it to be executed 5 days late. The bank will pay you a total of ₹910.96 as compensation. This amount includes interest calculated at the savings bank rate for the delay period, adjusted to fall between ₹100 and ₹1,000, plus the ₹500 penalty charges you incurred from other banks due to this delay. The compensation covers the inconvenience and financial impact caused by the late debit. The bank bears the entire compensation amount. The calculation follows RBI guidelines that ensure you are fairly compensated for the delay without exceeding set limits.",
       "bank_name": null,
       "links": null
     }
@@ -114,13 +114,13 @@
   {
     "scenario_id": 9,
     "label": "Erroneous Debit (Bank Error)",
-    "user_story": "Today is 8 February 2026. I was wrongly debited/duplicate debited by the bank for ₹30,000.\nThe bank reversed it later, but I suffered an interest loss of ₹1,000 and downstream charges reversal of ₹500.\nThis involved a bank staff error / staff-fraud case, so apply the +1% staff-fraud uplift.\nCompute compensation as interest loss + downstream reversal + 1% uplift in staff-fraud cases.",
+    "user_story": "Today is 1 March 2026. I was wrongly debited/duplicate debited by the bank for ₹30,000.\nThe bank reversed it later, but I suffered an interest loss of ₹1,000 and downstream charges reversal of ₹500.\nThis involved a bank staff error / staff-fraud case, so apply the +1% staff-fraud uplift.\nCompute compensation as interest loss + downstream reversal + 1% uplift in staff-fraud cases.",
     "api_response": {
       "transaction_amount": "30000",
       "transaction_date": "none",
       "compensation_eligible": true,
       "compensation_amount": "1510",
-      "other_info": "You are eligible for compensation because the bank made an error by wrongly debiting your account and later reversing it. The bank acknowledges the interest loss of ₹1,000 and the downstream charges reversal of ₹500 you suffered. Additionally, since this involved a staff error or fraud, a 1% uplift was applied as per the rules. The total compensation amount the bank will pay you is ₹1,510. This amount fully covers your losses, and the bank bears the entire cost. The compensation calculation considered the delay and losses you faced due to the erroneous debit and included the extra uplift for staff-related issues to fairly compensate you.",
+      "other_info": "You are eligible for compensation because the bank made an error by wrongly debiting your account and later reversing it. Since this involved a staff error or fraud, the bank has applied an additional 1% uplift as per the rules. The total compensation amount the bank should pay you is ₹1,510. This covers your interest loss of ₹1,000, the reversal of downstream charges of ₹500, plus the extra 1% uplift for the staff-fraud case. The bank bears the full compensation amount. The compensation calculation considered the delay in reversal and the financial impact on you, ensuring you are made whole for the losses caused by the bank’s mistake.",
       "bank_name": null,
       "links": null
     }
@@ -128,13 +128,13 @@
   {
     "scenario_id": 10,
     "label": "Failed IMPS (T+1)",
-    "user_story": "Today is 8 February 2026. My IMPS transaction of ₹8,000 failed (beneficiary not credited) and the amount was debited on 10 January 2026.\nThe funds were resolved (auto-reversal / credit) only on 12 January 2026.\nAssume T+1 applies and compute Rs 100 per day beyond T+1.",
+    "user_story": "Today is 1 March 2026. My IMPS transaction of ₹8,000 failed (beneficiary not credited) and the amount was debited on 10 January 2026.\nThe funds were resolved (auto-reversal / credit) only on 12 January 2026.\nAssume T+1 applies and compute Rs 100 per day beyond T+1.",
     "api_response": {
       "transaction_amount": "8000",
       "transaction_date": "2026-01-12",
       "compensation_eligible": true,
       "compensation_amount": "100",
-      "other_info": "You are eligible for compensation because your IMPS transaction failed and the amount was credited back to you later than the expected T+1 day. The bank should pay you Rs 100 as compensation for the delay beyond the allowed time. There is no liability on your part, and the full compensation amount is borne by the bank. The compensation was calculated based on the delay in refunding your money after the transaction failure, applying Rs 100 per day beyond the T+1 day limit.",
+      "other_info": "You are eligible for compensation because your IMPS transaction failed and the amount was debited but not credited to the beneficiary on time. The bank has calculated a compensation of ₹100 for the delay beyond the expected resolution time (T+1 day). There is no liability on your part, and the bank will bear the full compensation amount of ₹100. This compensation is given because the bank took longer than the usual one working day to reverse or credit the funds back to you. Since no specific bank name is mentioned, this explanation is based on standard RBI guidelines for IMPS failures.",
       "bank_name": null,
       "links": null
     }
@@ -142,13 +142,13 @@
   {
     "scenario_id": 11,
     "label": "FD - Failed Action on Maturity Instruction",
-    "user_story": "Today is 8 February 2026. I provided maturity instruction for a Fixed Deposit before the cut-off.\nThe bank failed to execute it properly, and I suffered lost interest of ₹2,500 compared to the intended outcome.\nCompute compensation as the lost interest amount.",
+    "user_story": "Today is 1 March 2026. I provided maturity instruction for a Fixed Deposit before the cut-off.\nThe bank failed to execute it properly, and I suffered lost interest of ₹2,500 compared to the intended outcome.\nCompute compensation as the lost interest amount.",
     "api_response": {
       "transaction_amount": "none",
       "transaction_date": "none",
       "compensation_eligible": true,
       "compensation_amount": "2500",
-      "other_info": "You are eligible for compensation because you gave the maturity instruction for your Fixed Deposit before the cut-off time, but the bank did not execute it properly, causing you to lose ₹2,500 in interest. The bank should pay you the full amount of ₹2,500 as compensation. This amount reflects the interest you missed out on due to the bank’s failure to act on your instruction in time. The calculation follows RBI guidelines that ensure you are compensated for any loss caused by the bank’s delay or error, without you bearing any liability. If you have a specific bank in mind, their own policies might offer additional benefits, but based on RBI rules, this is the fair compensation for your case.",
+      "other_info": "You are eligible for compensation because you gave the maturity instruction for your Fixed Deposit before the cut-off time, but the bank did not execute it correctly, causing you to lose ₹2,500 in interest. The bank should pay you the full amount of ₹2,500 as compensation. This amount reflects the interest you missed out on due to the bank's failure to act on your instruction in time. The calculation follows RBI guidelines that ensure the customer is made whole for any loss caused by the bank’s delay or error. Since no specific bank name is mentioned, there is no additional note about the bank’s own policy.",
       "bank_name": null,
       "links": null
     }
@@ -156,13 +156,13 @@
   {
     "scenario_id": 12,
     "label": "Investment/Redemption Slip - Processing Delay (Mutual Fund)",
-    "user_story": "Today is 8 February 2026. I submitted a mutual fund investment/redemption slip on 1 January 2026 for ₹1,00,000.\nThe processing completed on 11 January 2026 (delay).\nSB interest rate for delay compensation is 3% per annum.\nThis is NOT an SGB rejection case.\nCompute compensation as SB-rate interest for delayed period.",
+    "user_story": "Today is 1 March 2026. I submitted a mutual fund investment/redemption slip on 1 January 2026 for ₹1,00,000.\nThe processing completed on 11 January 2026 (delay).\nSB interest rate for delay compensation is 3% per annum.\nThis is NOT an SGB rejection case.\nCompute compensation as SB-rate interest for delayed period.",
     "api_response": {
       "transaction_amount": "100000",
       "transaction_date": "2026-01-11",
       "compensation_eligible": true,
       "compensation_amount": "8219.18",
-      "other_info": "You are eligible for compensation because there was a delay in processing your mutual fund investment/redemption slip. You submitted it on 1 January 2026, but it was completed only on 11 January 2026, which is beyond the expected time. The bank should pay you ₹8,219.18 as compensation for this delay.\n\nThis amount is calculated based on the standard savings bank interest rate of 3% per annum, applied to the delayed period on your transaction amount of ₹1,00,000. Essentially, the bank compensates you for the loss of potential interest you could have earned during the delay.\n\nSince there is no mention of any customer liability or bank-specific policy, the full compensation amount is borne by the bank.",
+      "other_info": "You are eligible for compensation because there was a delay in processing your mutual fund investment/redemption slip. You submitted the slip on 1 January 2026, but the processing was completed only on 11 January 2026, which caused a delay. As per the rules, the bank compensates you by paying interest at the savings bank (SB) rate of 3% per annum for the delayed period.\n\nThe bank should pay you ₹8,219.18 as compensation for this delay. There is no liability on your part, and the entire compensation amount is borne by the bank.\n\nThis compensation was calculated by applying the SB interest rate to the transaction amount for the number of days the processing was delayed, reflecting the loss you incurred due to the late completion. Since this is not related to Sovereign Gold Bond rejection cases, the standard delay compensation rules apply.\n\nIf you have any more questions or need further assistance, feel free to ask!",
       "bank_name": null,
       "links": null
     }
@@ -170,13 +170,13 @@
   {
     "scenario_id": 13,
     "label": "Duplicate Demand Draft - Delay",
-    "user_story": "Today is 8 February 2026. I requested a duplicate demand draft for ₹50,000 on 1 January 2026.\nThe duplicate demand draft was issued on 11 January 2026.\nCorresponding FD rate for that maturity period is 6% per annum.\nCompute compensation using the FD-rate interest for the delay.",
+    "user_story": "Today is 1 March 2026. I requested a duplicate demand draft for ₹50,000 on 1 January 2026.\nThe duplicate demand draft was issued on 11 January 2026.\nCorresponding FD rate for that maturity period is 6% per annum.\nCompute compensation using the FD-rate interest for the delay.",
     "api_response": {
       "transaction_amount": "50000",
       "transaction_date": "2026-01-11",
       "compensation_eligible": true,
       "compensation_amount": "8219.18",
-      "other_info": "You are eligible for compensation because there was a delay in issuing your duplicate demand draft. You requested it on 1 January 2026, but it was only issued on 11 January 2026, causing a delay. The bank should pay you ₹8,219.18 as compensation for this delay. This amount is calculated based on the fixed deposit interest rate of 6% per annum for the period of the delay, reflecting the interest you could have earned if the amount was available to you on time. Since there is no mention of any customer liability or shared compensation, the full amount is borne by the bank.",
+      "other_info": "You are eligible for compensation because there was a delay in issuing your duplicate demand draft. You requested it on 1 January 2026, but it was only issued on 11 January 2026, causing a delay. The bank should pay you ₹8,219.18 as compensation for this delay. This amount is calculated based on the fixed deposit interest rate of 6% per annum for the period of the delay, reflecting the interest you could have earned if the amount was available to you on time. There is no liability on your part, and the full compensation is borne by the bank.",
       "bank_name": null,
       "links": null
     }
@@ -184,13 +184,13 @@
   {
     "scenario_id": 14,
     "label": "Locker - Loss Due to Bank Negligence",
-    "user_story": "Today is 8 February 2026. My locker contents were lost due to bank negligence at the bank premises.\nAnnual locker rent is ₹200.\nThe policy cap for locker loss compensation is ₹25,000.\nCompute compensation as 100 × annual locker rent, capped by the cap.",
+    "user_story": "Today is 1 March 2026. My locker contents were lost due to bank negligence at the bank premises.\nAnnual locker rent is ₹200.\nThe policy cap for locker loss compensation is ₹25,000.\nCompute compensation as 100 × annual locker rent, capped by the cap.",
     "api_response": {
       "transaction_amount": "200",
       "transaction_date": "none",
       "compensation_eligible": true,
       "compensation_amount": "20000",
-      "other_info": "You are eligible for compensation because the loss of your locker contents happened due to the bank’s negligence at their premises. According to the policy, compensation is calculated as 100 times the annual locker rent, but it cannot exceed the maximum cap set by the bank. In your case, the annual rent is ₹200, so 100 times that is ₹20,000, which is below the cap of ₹25,000. Therefore, the bank will pay you ₹20,000 as compensation. There is no amount you need to bear. The calculation follows the standard rule that compensates based on the rent multiple, limited by the maximum cap, without involving any delay or interest adjustments. Since the bank name is not specified, there are no additional bank-specific notes to mention.",
+      "other_info": "You are eligible for compensation because the loss of your locker contents happened due to the bank's negligence. According to the bank’s policy, the compensation is calculated as 100 times the annual locker rent, but it cannot exceed the maximum cap of ₹25,000. In your case, this calculation results in ₹20,000, which is less than the cap, so the bank will pay you ₹20,000 in full. There is no deduction or liability on your part. The compensation amount was determined directly based on the policy rules without any delay or interest adjustments.",
       "bank_name": null,
       "links": null
     }
@@ -198,13 +198,13 @@
   {
     "scenario_id": 15,
     "label": "Violation by Bank's Agent",
-    "user_story": "Today is 8 February 2026. I am complaining about improper conduct / violation by the bank's agent (DSA/courier/representative) within bank scope.\nMy actual direct financial loss is ₹10,000.\nCompute compensation as the actual direct financial loss only.",
+    "user_story": "Today is 1 March 2026. I am complaining about improper conduct / violation by the bank's agent (DSA/courier/representative) within bank scope.\nMy actual direct financial loss is ₹10,000.\nCompute compensation as the actual direct financial loss only.",
     "api_response": {
       "transaction_amount": "10000",
       "transaction_date": "none",
       "compensation_eligible": true,
       "compensation_amount": "10000",
-      "other_info": "You are eligible for compensation because the complaint involves improper conduct or violation by the bank’s agent, which caused you a direct financial loss of ₹10,000. The bank will pay you the full amount of ₹10,000 as compensation. Since this is a direct loss caused by the bank’s representative, the entire compensation amount is borne by the bank. The compensation was calculated based on the actual financial loss you suffered, without any deductions or delays considered, as per RBI guidelines for such cases. If you have a specific bank in mind, their own policies might add further benefits, but here the standard RBI rules apply.",
+      "other_info": "You are eligible for compensation because the bank's agent violated rules within the bank's scope, causing you a direct financial loss of ₹10,000. The bank will compensate you the full amount of ₹10,000, meaning you do not bear any liability in this case. The compensation was calculated based on the actual loss you suffered, without adding any delay charges or interest, as this is a straightforward case of agent misconduct. Since no specific bank name was provided, there are no additional notes about the bank’s own policy.",
       "bank_name": null,
       "links": null
     }

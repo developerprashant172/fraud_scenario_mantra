@@ -4,7 +4,7 @@ import json
 API_URL = "http://127.0.0.1:8000/mantra_compensation"
 OUTPUT_FILE = "compensation_test_results_remaining.json"
 
-today = "8 February 2026"
+today = "1 March 2026"
 
 scenarios = [
     {
