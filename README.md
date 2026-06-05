@@ -62,12 +62,7 @@ SB_INTEREST_RATE=0.03
 
 ### 1. Clone & Set Up Virtual Environment
 ```bash
-# Navigate to the workspace
-cd MT
 
-# Create virtual environment
-python3 -m venv venv
-source venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
