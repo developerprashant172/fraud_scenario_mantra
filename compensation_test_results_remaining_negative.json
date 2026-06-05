@@ -4,13 +4,7 @@
     "label": "NEG CIR / Credit-Report - missing resolution date",
     "user_story": "Today is 1 March 2026. I filed a CIR / credit-report dispute with my bank on 1 January 2026.\nThe corrected data was sent to me later.\nPlease calculate my compensation.",
     "api_response": {
-      "transaction_amount": "none",
-      "transaction_date": "none",
-      "compensation_eligible": false,
-      "compensation_amount": "none",
-      "other_info": "Thank you for your message. To help calculate your compensation, could you please provide the exact date when you received the corrected credit report from the bank?",
-      "bank_name": null,
-      "links": null
+      "error": "Expecting value: line 1 column 1 (char 0)"
     }
   },
   {
@@ -18,13 +12,7 @@
     "label": "NEG Card to Card Transfer - missing amount and resolution date",
     "user_story": "Today is 1 March 2026. I tried transferring from one card to another card on 10 January 2026.\nThe beneficiary card did not get credited and it was resolved later.\nCan you tell me if I am eligible for compensation?",
     "api_response": {
-      "transaction_amount": "none",
-      "transaction_date": "none",
-      "compensation_eligible": false,
-      "compensation_amount": "none",
-      "other_info": "Thank you for sharing the details. To check your eligibility for compensation, could you please provide the exact amount of the transfer and the date when the beneficiary card was credited or the issue was resolved?",
-      "bank_name": null,
-      "links": null
+      "error": "Expecting value: line 1 column 1 (char 0)"
     }
   },
   {
@@ -32,13 +20,7 @@
     "label": "NEG Cheque Lost in Transit - missing credit date and amount",
     "user_story": "Today is 1 March 2026. I deposited an outstation cheque on 1 January 2026.\nThe cheque was lost in transit and the actual credit came much later.\nWhat compensation am I eligible for?",
     "api_response": {
-      "transaction_amount": "none",
-      "transaction_date": "none",
-      "compensation_eligible": false,
-      "compensation_amount": "none",
-      "other_info": "Thank you for sharing the details. To assist you further, could you please provide the exact date when the cheque amount was finally credited to your account? Also, please let me know the amount of the cheque and the date when you reported the cheque as lost or delayed to the bank.",
-      "bank_name": null,
-      "links": null
+      "error": "Expecting value: line 1 column 1 (char 0)"
     }
   },
   {
@@ -46,13 +28,7 @@
     "label": "NEG Cheque Paid After Stop-Payment - missing original debit date",
     "user_story": "Today is 1 March 2026. I gave stop-payment instruction for a cheque of ₹25,000 before the bank presented it.\nHowever, the cheque was still paid and the credit/payment posted to my account.\nWhat compensation should I get?",
     "api_response": {
-      "transaction_amount": "none",
-      "transaction_date": "none",
-      "compensation_eligible": false,
-      "compensation_amount": "none",
-      "other_info": "Thank you for sharing the details. To assist you further, could you please provide the exact date when the cheque was paid despite the stop-payment instruction? Also, when did you report this issue to the bank?",
-      "bank_name": null,
-      "links": null
+      "error": "Expecting value: line 1 column 1 (char 0)"
     }
   },
   {
@@ -60,13 +36,7 @@
     "label": "NEG Credit Card Delayed Closure - missing closure date",
     "user_story": "Today is 1 March 2026. I requested closure of my credit card on 1 January 2026.\nThere were no outstanding dues. The bank failed to close the card within the required time and it got closed later.\nI want to know my compensation for this delay.",
     "api_response": {
-      "transaction_amount": "none",
-      "transaction_date": "none",
-      "compensation_eligible": false,
-      "compensation_amount": "none",
-      "other_info": "Thank you for sharing the details. To assist you with your compensation request, could you please provide the exact date when the credit card was actually closed by the bank?",
-      "bank_name": null,
-      "links": null
+      "error": "Expecting value: line 1 column 1 (char 0)"
     }
   },
   {
@@ -74,13 +44,7 @@
     "label": "NEG Credit Card Issued Without Consent - missing reversed amount",
     "user_story": "Today is 1 March 2026. A credit card was issued and activated without my written digital consent.\nI disputed the charges, and I did not use the card at all. The charges were reversed.\nCan you calculate my compensation?",
     "api_response": {
-      "transaction_amount": "none",
-      "transaction_date": "none",
-      "compensation_eligible": false,
-      "compensation_amount": "none",
-      "other_info": "Thank you for sharing the details. To help calculate your compensation, could you please provide the exact dates when the credit card was issued and when you first noticed the unauthorized charges? Also, could you confirm the date when the charges were reversed or refunded? This information will help us proceed.",
-      "bank_name": null,
-      "links": null
+      "error": "Expecting value: line 1 column 1 (char 0)"
     }
   },
   {
@@ -88,13 +52,7 @@
     "label": "NEG Delay in Return of Loan Security Docs - missing return date",
     "user_story": "Today is 1 March 2026. I fully repaid my loan and repayment was completed on 1 January 2026.\nThe bank returned the title/security documents after a significant delay.\nCompute the compensation for this delay.",
     "api_response": {
-      "transaction_amount": "none",
-      "transaction_date": "none",
-      "compensation_eligible": false,
-      "compensation_amount": "none",
-      "other_info": "Thank you for your message. To help calculate the compensation for the delay in returning your title/security documents, could you please provide the exact date when the bank returned these documents to you?",
-      "bank_name": null,
-      "links": null
+      "error": "Expecting value: line 1 column 1 (char 0)"
     }
   },
   {
@@ -102,13 +60,7 @@
     "label": "NEG ECS/Direct Debit - missing execution date",
     "user_story": "Today is 1 March 2026. My valid ECS/Direct Debit mandate was scheduled to execute on 1 January 2026.\nDue to bank failure, it actually got executed late. I also incurred some customer penalties at other banks.\nPlease tell me if I am eligible for compensation.",
     "api_response": {
-      "transaction_amount": "none",
-      "transaction_date": "none",
-      "compensation_eligible": false,
-      "compensation_amount": "none",
-      "other_info": "Thank you for your message. To assist you further, could you please provide the exact amount of the ECS/Direct Debit transaction and the actual date it was executed? Additionally, please share the details of any penalties you incurred, including the amounts and the dates they were charged.",
-      "bank_name": null,
-      "links": null
+      "error": "Expecting value: line 1 column 1 (char 0)"
     }
   },
   {
@@ -116,13 +68,7 @@
     "label": "NEG Erroneous Debit - missing exact debit amount",
     "user_story": "Today is 1 March 2026. I was wrongly debited/duplicate debited by the bank due to a staff error.\nThe bank reversed it later.\nCompute compensation for this.",
     "api_response": {
-      "transaction_amount": "none",
-      "transaction_date": "none",
-      "compensation_eligible": false,
-      "compensation_amount": "none",
-      "other_info": "Thank you for your message. To help calculate your compensation, could you please provide the exact amount of the incorrect debit, the date when the duplicate debit occurred, and the date when the bank reversed the amount?",
-      "bank_name": null,
-      "links": null
+      "error": "Expecting value: line 1 column 1 (char 0)"
     }
   },
   {
@@ -130,13 +76,7 @@
     "label": "NEG Failed IMPS - missing resolution date",
     "user_story": "Today is 1 March 2026. My IMPS transaction of ₹8,000 failed (beneficiary not credited) and the amount was debited on 10 January 2026.\nThe funds were resolved later.\nAssume T+1 applies and compute compensation.",
     "api_response": {
-      "transaction_amount": "none",
-      "transaction_date": "none",
-      "compensation_eligible": false,
-      "compensation_amount": "none",
-      "other_info": "Thank you for the details provided. Could you please confirm the exact date on which the funds were credited back to your account? This will help us calculate the compensation accurately.",
-      "bank_name": null,
-      "links": null
+      "error": "Expecting value: line 1 column 1 (char 0)"
     }
   },
   {
@@ -144,13 +84,7 @@
     "label": "NEG FD Failed Maturity Instruction - missing lost interest amount",
     "user_story": "Today is 1 March 2026. I provided maturity instruction for a Fixed Deposit before the cut-off.\nThe bank failed to execute it properly, and I suffered lost interest compared to the intended outcome.\nCompute compensation.",
     "api_response": {
-      "transaction_amount": "none",
-      "transaction_date": "none",
-      "compensation_eligible": false,
-      "compensation_amount": "none",
-      "other_info": "Thank you for your message. To help calculate the compensation accurately, could you please provide the following details?\n\n1. The exact amount of the Fixed Deposit.\n2. The original maturity date of the Fixed Deposit.\n3. The specific maturity instruction you provided.\n4. The date and time when you gave the maturity instruction.\n5. The date when the bank failed to execute the instruction.\n6. Any communication or confirmation received from the bank regarding this issue.\n\nOnce I have this information, I can assist you further.",
-      "bank_name": null,
-      "links": null
+      "error": "Expecting value: line 1 column 1 (char 0)"
     }
   },
   {
@@ -158,13 +92,7 @@
     "label": "NEG Investment Slip Processing Delay - missing processing date",
     "user_story": "Today is 1 March 2026. I submitted a mutual fund investment slip on 1 January 2026 for ₹1,00,000.\nThe processing completed with a delay.\nCompute compensation for the delay.",
     "api_response": {
-      "transaction_amount": "none",
-      "transaction_date": "none",
-      "compensation_eligible": false,
-      "compensation_amount": "none",
-      "other_info": "Thank you for the details provided. Could you please share the exact date when the processing of your mutual fund investment slip was completed? This will help us calculate the compensation accurately.",
-      "bank_name": null,
-      "links": null
+      "error": "Expecting value: line 1 column 1 (char 0)"
     }
   },
   {
@@ -172,13 +100,7 @@
     "label": "NEG Duplicate DD Delay - missing issue date",
     "user_story": "Today is 1 March 2026. I requested a duplicate demand draft for ₹50,000 on 1 January 2026.\nThe duplicate demand draft was issued late.\nCompute compensation.",
     "api_response": {
-      "transaction_amount": "none",
-      "transaction_date": "none",
-      "compensation_eligible": false,
-      "compensation_amount": "none",
-      "other_info": "Thank you for sharing the details. To help calculate the compensation, could you please provide the exact date when you received the duplicate demand draft? Also, when did you report the delay or issue to the bank?",
-      "bank_name": null,
-      "links": null
+      "error": "Expecting value: line 1 column 1 (char 0)"
     }
   },
   {
@@ -186,13 +108,7 @@
     "label": "NEG Locker Loss Due to Bank Negligence - missing annual rent",
     "user_story": "Today is 1 March 2026. My locker contents were lost due to bank negligence at the bank premises.\nCompute compensation.",
     "api_response": {
-      "transaction_amount": "none",
-      "transaction_date": "none",
-      "compensation_eligible": false,
-      "compensation_amount": "none",
-      "other_info": "I’m sorry to hear about the loss of your locker contents. To assist you with the compensation calculation, could you please provide the following details: \n\n1. The date when you first reported the loss to the bank.\n2. An inventory or estimated value of the lost items.\n3. Any documents or proof of ownership for the items in the locker.\n4. Whether you have filed a police report regarding this incident.\n\nThank you for your cooperation.",
-      "bank_name": null,
-      "links": null
+      "error": "Expecting value: line 1 column 1 (char 0)"
     }
   },
   {
@@ -200,13 +116,7 @@
     "label": "NEG Violation by Bank's Agent - missing financial loss",
     "user_story": "Today is 1 March 2026. I am complaining about improper conduct / violation by the bank's agent (DSA) within bank scope.\nI had some direct financial loss.\nCompute compensation.",
     "api_response": {
-      "transaction_amount": "none",
-      "transaction_date": "none",
-      "compensation_eligible": false,
-      "compensation_amount": "none",
-      "other_info": "Thank you for your message. To help us assess your complaint and calculate any compensation, could you please provide the following details: \n\n1. The exact amount of your financial loss.\n2. The date when the loss or incident occurred.\n3. The date you reported this issue to the bank or the agent.\n4. Any supporting documents or evidence related to the incident, if available.\n\nThis information will help us assist you better.",
-      "bank_name": null,
-      "links": null
+      "error": "Expecting value: line 1 column 1 (char 0)"
     }
   }
 ]
